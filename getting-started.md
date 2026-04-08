@@ -2,6 +2,8 @@
 
 ZKPnote is a privacy-first note-taking app with blockchain-backed proof of originality. Your notes are encrypted end-to-end — only you can read them.
 
+**The app is live at [zkpnote.vercel.app](https://zkpnote.vercel.app).**
+
 ## Creating Your Vault
 
 ### Option A: Seed Phrase (Recommended)
@@ -27,8 +29,10 @@ If you already have a Solana wallet via the Phantom browser extension:
 ## Writing Notes
 
 - Click **New Note** in the sidebar (or press the + button)
-- Write in **Markdown** — ZKPnote supports GitHub Flavored Markdown including headings, lists, code blocks, tables, and more
+- Write in **Markdown** or **Rich Text** — toggle between modes using the toolbar. Rich Text gives you a familiar word-processor experience; your notes are stored as Markdown internally, so you can switch freely.
+- ZKPnote supports GitHub Flavored Markdown including headings, lists, code blocks, tables, and more
 - Toggle between **Edit** and **Preview** mode using the view toggle in the toolbar
+- Toggle **dark/light theme** for the editor by clicking the sun/moon icon in the toolbar. Your preference is saved automatically.
 - Notes auto-save as you type
 
 ## Organizing with Folders
@@ -59,7 +63,7 @@ Click **Lock** in the sidebar to clear all data from memory. You'll need your se
 
 ## Backup & Restore
 
-- **Export:** Sidebar > Export Vault — downloads an encrypted JSON file
-- **Import:** Sidebar > Import Vault — restores from a previously exported file
+- **Export:** Sidebar > Export Vault — downloads an encrypted JSON file. You can also export individual notes as `.md` Markdown files.
+- **Import:** Sidebar > Import Vault — restores from a previously exported JSON file. You can also import `.md` Markdown files directly as new notes.
 
 Your backup file is encrypted with your key. Without your seed phrase, the backup is unreadable.

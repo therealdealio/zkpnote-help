@@ -40,8 +40,9 @@ ZKPnote protects sellers from content theft:
 1. Go to the **Marketplace** (link in the sidebar)
 2. Browse or search for listings by title, author, or keyword
 3. Filter by category using the pill buttons
-4. Click a listing to see details and the content preview
-5. Click **Buy Now** to purchase
+4. Click a listing to see details and the content preview — listing previews now show rendered Markdown, so you see formatted text rather than raw code
+5. Click **Buy Now** to purchase — an inline confirmation with a full fee breakdown appears before you sign the transaction
+6. You can buy the same listing multiple times (useful for gifting or separate vaults)
 
 ### What Happens When You Buy
 

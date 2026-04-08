@@ -2,6 +2,9 @@
 
 ## General
 
+### What does ZKP mean?
+ZKP stands for Zero-Knowledge Proof — a cryptographic method that lets you prove something (like authorship) without revealing the underlying data. ZKPnote uses this concept to let you prove you wrote a note without exposing its contents.
+
 ### What is ZKPnote?
 ZKPnote is a privacy-first note-taking app that encrypts your notes end-to-end and anchors them on the Solana blockchain. It combines a markdown editor, a Solana wallet, and a peer-to-peer marketplace for selling knowledge assets.
 
@@ -10,6 +13,12 @@ The core note-taking and encryption features are free. The marketplace charges a
 
 ### Is ZKPnote open source?
 ZKPnote is proprietary software. The smart contract source, developer documentation, and help guides are publicly available for transparency.
+
+### Can I use a rich text editor instead of Markdown?
+Yes! Toggle between Markdown and Rich Text modes using the toolbar. Rich Text gives you a familiar word-processor experience with bold, italic, headings, lists, and more. Your notes are stored as Markdown internally, so you can switch between modes freely.
+
+### Can I use dark or light mode?
+Yes, click the sun/moon icon in the editor toolbar to toggle between dark and light mode for the writing area. Your preference is saved automatically.
 
 ## Vault & Security
 
