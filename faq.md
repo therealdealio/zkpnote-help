@@ -20,6 +20,12 @@ Yes! Toggle between Markdown and Rich Text modes using the toolbar. Rich Text gi
 ### Can I use dark or light mode?
 Yes, click the sun/moon icon in the editor toolbar to toggle between dark and light mode for the writing area. Your preference is saved automatically.
 
+### Can I use ZKPnote offline?
+Yes. Your notes save to your browser's local storage (IndexedDB) as you type, even without an internet connection. When you reconnect, your vault will sync to the cloud. Just don't clear your browser data before syncing — local storage is the primary store until sync completes.
+
+### Can I access my vault from multiple devices?
+Yes. Your seed phrase is your key. Enter it on any device with a browser to unlock your vault. Your encrypted notes sync through the cloud, so you'll see the same vault everywhere.
+
 ## Vault & Security
 
 ### What happens if I lose my seed phrase?
