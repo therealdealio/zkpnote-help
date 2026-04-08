@@ -104,4 +104,21 @@ Only SHA-256 hashes of your individual notes, plus metadata (timestamp, owner ad
 Solana. The smart contract is built with the Anchor framework.
 
 ### Can I verify a proof on-chain?
-Yes. Each proof creates a PDA (Program Derived Address) derived from the content hash and your wallet address. You can look it up on any Solana explorer using the program ID `9AbLiwQ82manor3YyArrQhhpxPCFha5xbF187EtdDae5`. You can also use the [Verify page](/verify) in the marketplace to check any content.
+Yes. Each proof creates a PDA (Program Derived Address) derived from the content hash and your wallet address. You can look it up on any Solana explorer using the program ID `Ad67RwgTaeh77UQ5oZXAwt3fTvg3u5oNxNfcc3tGJLbc`. You can also use the [Verify page](/verify) in the marketplace to check any content.
+
+## AI Integration
+
+### Can I use ZKPnote with Claude or other AI assistants?
+Yes. ZKPnote includes an MCP (Model Context Protocol) server that lets AI assistants like Claude interact directly with your vault. The MCP server can save, read, update, delete, and list notes, as well as verify content and search for similar proved content.
+
+### How do I set up the MCP server?
+1. Build the MCP server from `packages/mcp-server/` in the ZKPnote source
+2. Set the `ZKPNOTE_SEED_PHRASE` environment variable to your vault seed phrase
+3. Configure your AI client (e.g., Claude Desktop) to use the server via stdio transport
+4. The server derives your encryption keys from the seed phrase — it has full read/write access to your vault
+
+### Is the MCP server safe?
+The MCP server runs locally on your machine and communicates via stdio (not over a network). Your seed phrase is used only to derive keys. However, any AI assistant connected through the MCP server has full access to your vault, so only use it with trusted AI clients.
+
+### What is ZKPnote's current status?
+ZKPnote is currently in **Alpha Testing** on the Solana **devnet**. This means the app is fully functional but uses test SOL (not real money) for all blockchain operations. Mainnet launch is planned for a future release.
