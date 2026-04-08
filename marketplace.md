@@ -37,8 +37,8 @@ ZKPnote protects sellers from content theft:
 
 ## Buying a Note
 
-1. Go to the **Marketplace** (link in the sidebar)
-2. Browse or search for listings by title, author, or keyword
+1. Go to the **Marketplace** (link in the sidebar or top nav)
+2. Browse or search for listings by title, author, or keyword. You can also click **Verify** in the nav bar to check if content has been proved on-chain.
 3. Filter by category using the pill buttons
 4. Click a listing to see details and the content preview — listing previews now show rendered Markdown, so you see formatted text rather than raw code
 5. Click **Buy Now** to purchase — an inline confirmation with a full fee breakdown appears before you sign the transaction
@@ -83,6 +83,21 @@ A **2% fee** is automatically deducted from every sale via the on-chain smart co
 | 0.1 SOL | 0.098 SOL | 0.002 SOL |
 | 1.0 SOL | 0.98 SOL | 0.02 SOL |
 | 10.0 SOL | 9.80 SOL | 0.20 SOL |
+
+## Verify Page
+
+The **Verify** page lets anyone check whether a piece of content has been proved on-chain — no login or wallet required.
+
+1. Go to the **Marketplace** and click **Verify** in the nav bar (also available in the sidebar)
+2. Paste any text into the input field
+3. ZKPnote hashes the content and checks it against all on-chain proofs
+
+### What You'll See
+
+- **Exact match:** If someone has proved that exact content, you'll see the proof details — including the prover's address and the Solana transaction link.
+- **Similar content:** If no exact match is found, the Verify page also surfaces similar proved content so you can see if a close variation has already been registered.
+
+This is useful for buyers who want to confirm a seller truly proved their work, or for anyone who wants to check if specific content has already been claimed.
 
 ## Analytics
 

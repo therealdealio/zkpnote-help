@@ -40,17 +40,6 @@ XChaCha20-Poly1305 via libsodium for note encryption. 256-bit keys derived from 
 ### Is my data backed up?
 Yes. Your encrypted vault is automatically synced to cloud storage. You can also export a backup file manually. Both are encrypted — useless without your seed phrase.
 
-## Wallet
-
-### Do I need SOL to use ZKPnote?
-You need a small amount of SOL for on-chain operations (writing vault hashes, marketplace transactions). On test networks, use the Airdrop button to get free test SOL.
-
-### Can I use my Phantom wallet?
-Yes. Click "Connect with Phantom" on the welcome screen. You'll need to sign a message to derive your encryption key (no SOL spent). Your Phantom wallet handles transaction signing.
-
-### Why does Phantom ask me to sign a message?
-ZKPnote uses a deterministic message signature to derive your encryption key. Since Ed25519 signatures are deterministic, the same wallet always produces the same key. This is not a transaction — no SOL is spent.
-
 ## Marketplace
 
 ### Can I resell a note I bought?
@@ -78,13 +67,41 @@ Two layers of protection:
 1. **Purchase tagging:** Notes bought from the marketplace cannot be relisted
 2. **Similarity detection:** When creating a listing, the server compares content against all existing listings using trigram-based similarity. Anything 70%+ similar to another seller's listing is blocked.
 
+## Proof of Originality
+
+### What is Proof of Originality?
+Proof of Originality registers a SHA-256 hash of your note on the Solana blockchain. The first person to register a hash wins — it permanently proves that you created that specific content at a specific time. Think of it as a timestamped digital fingerprint that nobody can forge or backdate.
+
+### How do I prove my note?
+Open the note in the editor and click the **shield icon** (purple) in the toolbar. ZKPnote hashes your note content and submits a transaction to Solana. You'll need a small amount of SOL to cover the transaction fee. Once confirmed, the shield turns green and a banner shows the Solana Explorer link.
+
+### Can someone else prove my content?
+Only if they prove it before you do. Once a SHA-256 hash is registered on-chain, that exact content is claimed — no one else can register the same hash. This is why it's a good idea to prove your original work as soon as you're ready.
+
+### What is the Verify page?
+The Verify page is a public page at `/verify` (accessible from the marketplace nav bar and sidebar) where anyone can check whether a piece of content has been proved on-chain. Paste in any text and ZKPnote will check for exact matches and also surface similar proved content. No login or wallet is required.
+
+## Wallet
+
+### Do I need SOL to use ZKPnote?
+You need a small amount of SOL for on-chain operations (proving notes, marketplace transactions). On test networks, use the Airdrop button to get free test SOL.
+
+### Can I use my Phantom wallet?
+Yes. Click "Connect with Phantom" on the welcome screen. You'll need to sign a message to derive your encryption key (no SOL spent). Your Phantom wallet handles transaction signing.
+
+### Why does Phantom ask me to sign a message?
+ZKPnote uses a deterministic message signature to derive your encryption key. Since Ed25519 signatures are deterministic, the same wallet always produces the same key. This is not a transaction — no SOL is spent.
+
+### Why does my Phantom wallet stay connected now?
+ZKPnote caches the encryption signature in your browser session. This means you no longer need to re-approve the signature message every time you refresh the page. Your Phantom wallet stays connected as long as your browser session is active.
+
 ## Blockchain
 
 ### What gets stored on the blockchain?
-Only a SHA-256 hash of your encrypted vault, plus metadata (note count, timestamp, owner address). Your actual note content is never on-chain.
+Only SHA-256 hashes of your individual notes, plus metadata (timestamp, owner address). Your actual note content is never on-chain.
 
 ### Which blockchain does ZKPnote use?
 Solana. The smart contract is built with the Anchor framework.
 
-### Can I verify my vault hash on-chain?
-Yes. Your vault's PDA (Program Derived Address) is deterministic based on your wallet address. You can look it up on any Solana explorer using the program ID `9AbLiwQ82manor3YyArrQhhpxPCFha5xbF187EtdDae5`.
+### Can I verify a proof on-chain?
+Yes. Each proof creates a PDA (Program Derived Address) derived from the content hash and your wallet address. You can look it up on any Solana explorer using the program ID `9AbLiwQ82manor3YyArrQhhpxPCFha5xbF187EtdDae5`. You can also use the [Verify page](/verify) in the marketplace to check any content.
