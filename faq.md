@@ -128,7 +128,7 @@ Yes. Each proof creates a PDA (Program Derived Address) derived from the content
 ## AI Integration
 
 ### Can I use ZKPnote with Claude or other AI assistants?
-Yes. ZKPnote includes an MCP (Model Context Protocol) server that lets AI assistants like Claude interact directly with your vault. The MCP server can save, read, update, delete, and list notes, as well as verify content and search for similar proved content.
+Yes. ZKPnote includes an MCP (Model Context Protocol) server with 15 tools that lets AI assistants like Claude interact directly with your vault and the marketplace. The MCP server can save, read, update, delete, reorder, and list notes; browse and cancel marketplace listings; view analytics; list and recover proofs; and verify or search for similar proved content.
 
 ### How do I set up the MCP server?
 1. Build the MCP server from `packages/mcp-server/` in the ZKPnote source
