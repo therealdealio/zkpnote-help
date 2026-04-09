@@ -55,6 +55,30 @@ That's it. Your note's content fingerprint is now permanently recorded on-chain 
 
 After proving a note, a **green shield icon** appears next to it in the sidebar. This makes it easy to see at a glance which notes have been proved and which haven't.
 
+## Reordering Notes
+
+You can reorder notes within a folder using drag and drop:
+
+1. Hover over a note in the sidebar — a **grip handle** (six dots) appears on the left
+2. Drag the note to a new position
+3. A **purple indicator line** shows where the note will be placed
+4. Drop to confirm — your custom order is saved automatically
+
+Notes with a custom order keep their position even after editing. Notes without a custom order fall back to sorting by last edited.
+
+## Pop-Out Floating Window
+
+Want to keep a note visible while working in other apps? Pop it out into a floating window:
+
+1. Open a note in the editor
+2. Click the **pop-out button** in the toolbar (next to the theme toggle)
+3. The note opens in a floating window that stays on top of other applications (Chrome/Edge)
+4. Edit the title or content directly in the floating window — changes sync back to your vault in real time
+5. The floating window shows a live word count
+6. Close the floating window by clicking its close button, or switch notes in the main app (the pop-out auto-closes)
+
+**Note:** On Safari and Firefox, the pop-out opens as a standard popup window (no always-on-top behavior). Chrome and Edge support full always-on-top via the Document Picture-in-Picture API.
+
 ## Organizing with Folders
 
 - Click the folder icon in the sidebar to create folders

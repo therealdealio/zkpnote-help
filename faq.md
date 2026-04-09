@@ -71,6 +71,15 @@ Three layers of protection:
 2. **Listing similarity (70%):** When creating a listing, the server compares content against all existing marketplace listings using trigram-based similarity. Anything 70%+ similar to another seller's listing is blocked.
 3. **Proof similarity (90%):** Content is also compared against all on-chain proved notes from other authors. If your note is 90%+ similar to another author's proved work, you cannot list it — even if that content was never listed for sale. This protects proved intellectual property beyond the marketplace.
 
+### Can I cancel or unlist something I put on the marketplace?
+Yes. Open your listing in the marketplace and click **Cancel Listing**, then confirm. For "Original" listings (where the note was removed from your vault), the note is automatically restored to your vault. For "Copies" and "Auction" listings, the note stays in your vault and the listing is simply removed.
+
+### Can I reorder my notes?
+Yes. Hover over a note in the sidebar to reveal a grip handle (six dots), then drag it to a new position. Your custom sort order is saved and persists across sessions.
+
+### Can I pop out a note into its own window?
+Yes. Click the pop-out button in the editor toolbar to open the note in a floating window. On Chrome and Edge, the window stays on top of other applications. On Safari and Firefox, it opens as a standard popup. Edits in the floating window sync back to your vault in real time.
+
 ## Proof of Originality
 
 ### What is Proof of Originality?
@@ -78,6 +87,9 @@ Proof of Originality registers a SHA-256 hash of your note on the Solana blockch
 
 ### How do I prove my note?
 Open the note in the editor and click the **shield icon** (purple) in the toolbar. ZKPnote hashes your note content and submits a transaction to Solana. You'll need a small amount of SOL to cover the transaction fee. Once confirmed, the shield turns green and a banner shows the Solana Explorer link.
+
+### Can I recover a note from its proof?
+Yes. If you've lost a note but still have the proof transaction signature, ZKPnote can recover the full content from the proof database. The recovery is owner-only — only the wallet that created the proof can retrieve the content.
 
 ### Can someone else prove my content?
 Only if they prove it before you do. Once a SHA-256 hash is registered on-chain, that exact content is claimed — no one else can register the same hash. This is why it's a good idea to prove your original work as soon as you're ready.

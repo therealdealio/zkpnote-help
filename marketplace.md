@@ -38,6 +38,19 @@ ZKPnote protects sellers from content theft with three layers of enforcement:
 - **Listing similarity (70%).** When creating a listing, the system compares your content against all existing marketplace listings from other sellers. Anything with 70%+ trigram similarity is blocked.
 - **Proof similarity (90%).** Your content is also compared against all on-chain proved notes from other authors. If it's 90%+ similar to another author's proved work, the listing is rejected — even if that proved content was never listed for sale.
 
+## Cancelling a Listing
+
+Changed your mind? You can cancel any of your own listings:
+
+1. Open your listing in the marketplace
+2. Click **Cancel Listing**
+3. Confirm by clicking **Confirm Cancel** (or click **Keep Listing** to back out)
+4. The listing is removed from the marketplace
+
+**Important:** If you listed a note as an "Original" (one-time transfer), the note was removed from your vault when you created the listing. When you cancel, ZKPnote automatically **restores the note back to your vault** — you'll see it reappear in your sidebar.
+
+For "Copies" and "Auction" listings, your note was never removed, so cancellation simply deletes the listing.
+
 ## Buying a Note
 
 1. Go to the **Marketplace** (link in the sidebar or top nav)
