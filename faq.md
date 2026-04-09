@@ -89,6 +89,9 @@ You need a small amount of SOL for on-chain operations (proving notes, marketpla
 ### Can I use my Phantom wallet?
 Yes. Click "Connect with Phantom" on the welcome screen. You'll need to sign a message to derive your encryption key (no SOL spent). Your Phantom wallet handles transaction signing.
 
+### Will I see the same notes whether I log in with Phantom or my seed phrase?
+Yes. Both login methods derive the same encryption key and wallet address, so you get the same vault regardless of how you log in. Your seed phrase produces the same Solana address as Phantom (via BIP-44 standard derivation), and both modes sign the same internal message to derive identical encryption keys.
+
 ### Why does Phantom ask me to sign a message?
 ZKPnote uses a deterministic message signature to derive your encryption key. Since Ed25519 signatures are deterministic, the same wallet always produces the same key. This is not a transaction — no SOL is spent.
 
