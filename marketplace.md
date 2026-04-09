@@ -4,7 +4,9 @@ The ZKPnote marketplace lets you buy and sell notes, guides, templates, and know
 
 ## Selling a Note
 
-1. Open the note you want to sell
+**Important:** You must prove your note on-chain before you can list it for sale. Click the **Prove** button (purple shield icon) in the editor toolbar first. This establishes your authorship on the blockchain before any commercial activity.
+
+1. Prove your note on-chain (shield icon in toolbar)
 2. Click the **Sell** button ($ icon) in the toolbar
 3. Choose your sale type:
 

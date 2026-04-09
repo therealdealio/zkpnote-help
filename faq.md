@@ -42,6 +42,9 @@ Yes. Your encrypted vault is automatically synced to cloud storage. You can also
 
 ## Marketplace
 
+### Do I need to prove my note before selling?
+Yes. You must prove your note on-chain before listing it on the marketplace. Click the Prove button (purple shield icon) in the editor toolbar first. This establishes your authorship on the Solana blockchain before any commercial activity. If you try to sell without proving, you'll be prompted to prove first.
+
 ### Can I resell a note I bought?
 No. Purchased notes are tagged and the Sell button is disabled. Additionally, if you copy the content into a new note and try to list it, the similarity detection system will block it.
 
