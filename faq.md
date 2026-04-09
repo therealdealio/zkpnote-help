@@ -66,9 +66,10 @@ When listing a note, you choose how much buyers see before purchasing:
 - **Full:** Entire note visible before purchase
 
 ### What stops someone from copying my content?
-Two layers of protection:
+Three layers of protection:
 1. **Purchase tagging:** Notes bought from the marketplace cannot be relisted
-2. **Similarity detection:** When creating a listing, the server compares content against all existing listings using trigram-based similarity. Anything 70%+ similar to another seller's listing is blocked.
+2. **Listing similarity (70%):** When creating a listing, the server compares content against all existing marketplace listings using trigram-based similarity. Anything 70%+ similar to another seller's listing is blocked.
+3. **Proof similarity (90%):** Content is also compared against all on-chain proved notes from other authors. If your note is 90%+ similar to another author's proved work, you cannot list it — even if that content was never listed for sale. This protects proved intellectual property beyond the marketplace.
 
 ## Proof of Originality
 

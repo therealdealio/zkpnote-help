@@ -32,10 +32,11 @@ The ZKPnote marketplace lets you buy and sell notes, guides, templates, and know
 
 ### Content Protection
 
-ZKPnote protects sellers from content theft:
+ZKPnote protects sellers from content theft with three layers of enforcement:
 
 - **Purchased notes can't be resold.** The Sell button is disabled for notes you bought from the marketplace.
-- **Similarity detection.** If someone copies your content into a new note and tries to list it, the system compares it against existing listings and blocks anything with 70%+ similarity.
+- **Listing similarity (70%).** When creating a listing, the system compares your content against all existing marketplace listings from other sellers. Anything with 70%+ trigram similarity is blocked.
+- **Proof similarity (90%).** Your content is also compared against all on-chain proved notes from other authors. If it's 90%+ similar to another author's proved work, the listing is rejected — even if that proved content was never listed for sale.
 
 ## Buying a Note
 
