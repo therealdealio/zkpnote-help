@@ -139,16 +139,30 @@ Yes. Standard shares require the reader to sign a view agreement transaction (~0
 ## AI Integration
 
 ### Can I use ZKPnote with Claude or other AI assistants?
-Yes. ZKPnote includes an MCP (Model Context Protocol) server with 16 tools that lets AI assistants like Claude interact directly with your vault and the marketplace. The MCP server can save notes individually or **save many notes at once in a single batch** (much faster for bulk imports), read, update, delete, reorder, and list notes; browse and cancel marketplace listings; view analytics; list and recover proofs; and verify or search for similar proved content.
+Yes. ZKPnote includes an MCP (Model Context Protocol) server with 18 tools that lets Claude and other AI agents read, write, search, and verify notes in your encrypted vault. You can ask Claude to save research, summarize notes, build a knowledge graph, check on-chain proofs, browse the marketplace, and more — all while your notes stay end-to-end encrypted.
 
 ### How do I set up the MCP server?
-1. Build the MCP server from `packages/mcp-server/` in the ZKPnote source
-2. Set the `ZKPNOTE_SEED_PHRASE` environment variable to your vault seed phrase
-3. Configure your AI client (e.g., Claude Desktop) to use the server via stdio transport
-4. The server derives your encryption keys from the seed phrase — it has full read/write access to your vault
+See the full setup guide: **[Using ZKPnote with Claude (MCP Setup)](./mcp-setup.md)**
+
+The short version:
+1. Clone the repo and build: `cd zkpnote/packages/mcp-server && npm install && npm run build`
+2. Add the server to your Claude config with your seed phrase and the API URL
+3. Restart Claude and ask "List my notes" to verify
+
+The guide covers Claude Desktop, Claude Code CLI, and VS Code setup with copy-paste config snippets.
 
 ### Is the MCP server safe?
-The MCP server runs locally on your machine and communicates via stdio (not over a network). Your seed phrase is used only to derive keys. However, any AI assistant connected through the MCP server has full access to your vault, so only use it with trusted AI clients.
+Yes. The MCP server runs **locally on your machine** — your seed phrase never leaves your device. All encryption happens before data touches the network. The server communicates via stdio (not over a network port) and writes nothing to disk. However, any AI assistant connected through MCP has full vault access, so only use it with trusted clients.
+
+### What tools does the MCP server provide?
+18 tools across four categories:
+
+- **Vault** (8 tools) — save, batch save, read, update, delete, reorder, list notes and folders
+- **Proofs** (4 tools) — verify content on-chain, search similar proved content, list proofs, recover lost notes
+- **Marketplace** (4 tools) — browse listings, get details, cancel listings, view analytics
+- **Knowledge Graph** (2 tools) — build a searchable index of all notes with summaries and relationships, query by keyword/project/tag
+
+For the full tool reference, see the [MCP Server Developer Docs](https://github.com/therealdealio/zkpnote-docs/blob/main/mcp-server.md).
 
 ### What is ZKPnote's current status?
 ZKPnote is currently in **Alpha Testing** on the Solana **devnet**. This means the app is fully functional but uses test SOL (not real money) for all blockchain operations. Mainnet launch is planned for a future release.
