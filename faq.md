@@ -103,7 +103,7 @@ The Verify page is a public page at `/verify` (accessible from the marketplace n
 You need a small amount of SOL for on-chain operations (proving notes, marketplace transactions). On test networks, use the Airdrop button to get free test SOL.
 
 ### Can I use my Phantom wallet?
-Yes. Click "Connect with Phantom" on the welcome screen. You'll need to sign a message to derive your encryption key (no SOL spent). Your Phantom wallet handles transaction signing.
+Yes. Click "Connect with Phantom" on the welcome screen. You'll need to sign a message to derive your encryption key (no SOL spent). Your Phantom wallet handles transaction signing. ZKPnote never stores an encrypted seed phrase for Phantom accounts — your wallet remains the only recovery path. You can still add an email address in Profile for news updates.
 
 ### Will I see the same notes whether I log in with Phantom or my seed phrase?
 Yes. Both login methods derive the same encryption key and wallet address, so you get the same vault regardless of how you log in. Your seed phrase produces the same Solana address as Phantom (via BIP-44 standard derivation), and both modes sign the same internal message to derive identical encryption keys.
@@ -125,10 +125,21 @@ Solana. The smart contract is built with the Anchor framework.
 ### Can I verify a proof on-chain?
 Yes. Each proof creates a PDA (Program Derived Address) derived from the content hash and your wallet address. You can look it up on any Solana explorer using the program ID `Ad67RwgTaeh77UQ5oZXAwt3fTvg3u5oNxNfcc3tGJLbc`. You can also use the [Verify page](/verify) in the marketplace to check any content.
 
+## Sharing
+
+### What happens when I open a share link?
+You'll see the note's metadata (title, sender, timestamp) and be asked to connect a wallet before the content is revealed. You can connect with Phantom, paste an existing seed phrase, or — if you're brand new to ZKPnote — sign up inline with a username, email, and password. A fresh wallet is generated on the spot and your encrypted seed is emailed to you via a one-time link.
+
+### Do I need my own vault to read a shared note?
+You need a wallet so the sender's access grant can be recorded on-chain. The in-page sign-up flow creates that wallet for you in one step, so brand-new readers don't need to leave the share page.
+
+### Is the share link signed on-chain?
+Yes. Standard shares require the reader to sign a view agreement transaction (~0.002 SOL rent). NDA shares additionally require the owner to approve the reader by signing an on-chain NDA contract with the reader's submitted name hash.
+
 ## AI Integration
 
 ### Can I use ZKPnote with Claude or other AI assistants?
-Yes. ZKPnote includes an MCP (Model Context Protocol) server with 15 tools that lets AI assistants like Claude interact directly with your vault and the marketplace. The MCP server can save, read, update, delete, reorder, and list notes; browse and cancel marketplace listings; view analytics; list and recover proofs; and verify or search for similar proved content.
+Yes. ZKPnote includes an MCP (Model Context Protocol) server with 16 tools that lets AI assistants like Claude interact directly with your vault and the marketplace. The MCP server can save notes individually or **save many notes at once in a single batch** (much faster for bulk imports), read, update, delete, reorder, and list notes; browse and cancel marketplace listings; view analytics; list and recover proofs; and verify or search for similar proved content.
 
 ### How do I set up the MCP server?
 1. Build the MCP server from `packages/mcp-server/` in the ZKPnote source

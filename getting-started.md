@@ -26,7 +26,21 @@ If you already have a Solana wallet via the Phantom browser extension:
 
 **Note:** Your Phantom wallet must be a full wallet (not view-only). You'll need to approve two prompts: one to connect, one to sign the key derivation message.
 
-**Persistent sessions:** Phantom sessions now persist across page refreshes. Once you approve the signature message, ZKPnote caches it in your browser session so you won't need to re-approve every time you reload the page.
+**Persistent sessions:** Phantom sessions persist across page refreshes. Once you approve the signature message, ZKPnote caches it in your browser session so you won't need to re-approve every time you reload the page.
+
+**Optional email for news updates:** Phantom users can open **Profile** and add an email address — purely for product news. No seed phrase is ever stored server-side for Phantom accounts; your wallet remains the only recovery path.
+
+### Option C: Sign Up from a Shared Note Link
+
+If someone sends you a ZKPnote share link and you don't yet have a wallet, you can create one inline:
+
+1. Open the share link
+2. Choose **Sign Up with Email**
+3. Enter a **username**, **email**, **password**, and **verify password**
+4. ZKPnote generates a brand-new 12-word seed phrase in your browser, encrypts it with your password (AES-GCM, PBKDF2), and emails you a secure one-time link so you can recover the phrase later
+5. Your account is registered and you can immediately view the shared note
+
+This path is for people who are brand new to ZKPnote — existing users should still unlock their vault normally before viewing a share.
 
 ## Writing Notes
 
