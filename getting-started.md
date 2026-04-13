@@ -93,6 +93,15 @@ Want to keep a note visible while working in other apps? Pop it out into a float
 
 **Note:** On Safari and Firefox, the pop-out opens as a standard popup window (no always-on-top behavior). Chrome and Edge support full always-on-top via the Document Picture-in-Picture API.
 
+## Searching Notes
+
+Use the search bar at the top of the sidebar to quickly find notes:
+
+- Type any keyword — notes are filtered in real time by **title** and **content**
+- Matching is case-insensitive
+- While searching, the folder tree flattens to show all matching notes regardless of which folder they're in
+- Click the **X** button (or clear the input) to return to the normal folder view
+
 ## Organizing with Folders
 
 - Click the folder icon in the sidebar to create folders
