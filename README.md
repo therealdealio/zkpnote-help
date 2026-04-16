@@ -12,6 +12,7 @@ User guides and documentation for ZKPnote — a privacy-first note-taking app wi
 ## Guides
 
 - [Quick Start Guide](./getting-started.md) — Create your vault, write notes, prove originality, and sync
+- [**Desktop App (macOS Public Beta)**](./desktop.md) — Install the native Mac app, features, keyboard shortcuts
 - [Using ZKPnote with Claude (MCP)](./mcp-setup.md) — Let Claude read, write, and search your notes
 - [Marketplace Guide](./marketplace.md) — Buy, sell, auction notes, and verify content on-chain
 - [FAQ](./faq.md) — Common questions about vaults, wallets, proofs, and the marketplace
