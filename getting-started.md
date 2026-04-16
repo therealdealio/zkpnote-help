@@ -134,6 +134,70 @@ Click **Lock** in the sidebar to clear all data from memory. You'll need your se
 ## Backup & Restore
 
 - **Export:** Sidebar > Export Vault — downloads an encrypted JSON file. You can also export individual notes as `.md` Markdown files.
-- **Import:** Sidebar > Import Vault — restores from a previously exported JSON file. You can also import `.md` Markdown files directly as new notes.
+- **Multi-select export:** Click **Select** at the top of the sidebar, check the notes you want (Cmd-click or Shift-click for ranges), then **Export .md** — downloads a single `.zip` of markdown files.
+- **Import:** Sidebar > Import Vault — restores from a previously exported JSON file. Drag `.md` / `.docx` / `.pdf` / `.html` / `.txt` files onto the sidebar to import as new notes.
 
 Your backup file is encrypted with your key. Without your seed phrase, the backup is unreadable.
+
+## Tabs
+
+Open multiple notes at once. Each appears as a tab above the editor. Drag to reorder. Middle-click or **⌘W** closes. **⌘⇧T** reopens the last closed tab. **⌘1**…**⌘9** jumps by index.
+
+## Find in Note
+
+Press **⌘F** while editing to open the find overlay. All matches highlight yellow; the active one is orange with a ring. **Enter** cycles forward, **Shift+Enter** back, **Esc** closes.
+
+## Wikilinks & Backlinks
+
+Type `[[` to start a wikilink. An autocomplete dropdown shows matching note titles — Enter or Tab inserts. In the rendered preview, hover any `[[link]]` for a 280ms popover with the target's title, tags, and first 400 characters. Click to jump.
+
+The **Backlinks panel** below the editor shows every note that links to the current one (via `[[wikilink]]`), plus every outgoing link. Both work in Markdown and Rich Text modes.
+
+## History
+
+Click the **clock icon** in the editor toolbar. ZKPnote auto-saves a revision every 10 seconds while you edit, keeping the last 50 per note. View any revision inline, restore with confirm. History stays on your device — never synced.
+
+## Inline Images
+
+Paste an image (⌘V) into the editor or click the **image button** in the toolbar. The image saves as an encrypted attachment in your vault and the markdown gets a short `![image](zkp-attach:<id>)` reference instead of a long base64 string. Works in both Markdown and Rich Text modes.
+
+## Focus Mode & Quick Capture
+
+- **Focus mode** (**⌘.**) collapses sidebar, status bar, and tabs. Esc or Mode ▾ → Default to restore.
+- **Typewriter mode** (**⌥⌘T**) keeps your caret centered as you scroll.
+- **Quick capture** (**⌘⇧N**) — modal for dumping a thought without leaving your current note. **⌘⏎** saves.
+
+## Command Palette
+
+Press **⌘K** anywhere to open a unified launcher. Type to search notes by title or tag. Lists actions: New note, Quick capture, Prove on Solana, Sync vault, Toggle focus, Show shortcuts. Arrow keys navigate, Enter runs.
+
+## Settings
+
+Press **⌘⇧,** to open settings. Configure theme (follow system / dark / light), auto-sync delay, network info, export vault, lock vault. Includes a quick reference for all keyboard shortcuts.
+
+## Mobile
+
+ZKPnote works on phone browsers. The wallet bar and Send/Sell buttons hide automatically to keep the interface clean. Open the sidebar via the hamburger button.
+
+## Keyboard Shortcuts
+
+Press **⌘/** anytime to see this list inside the app.
+
+| Shortcut | Action |
+|---|---|
+| **⌘K** | Command palette |
+| **⌘/** | Show all shortcuts |
+| **⌘⇧N** | Quick capture |
+| **⌘N** | New note |
+| **⌘F** | Find in note |
+| **⌘.** | Focus mode |
+| **⌥⌘T** | Typewriter mode |
+| **⌘B** | Toggle sidebar |
+| **⌘⇧G** | Toggle knowledge graph |
+| **⌘⇧,** | Settings |
+| **⌘⏎** (in editor) | Prove on Solana |
+| **⌘⇧S** | Sync vault now |
+| **⌘W** | Close active tab |
+| **⌘⇧T** | Reopen closed tab |
+| **⌘1**…**⌘9** | Jump to tab |
+| `[[` + type | Wikilink autocomplete |

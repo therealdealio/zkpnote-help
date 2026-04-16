@@ -166,3 +166,38 @@ For the full tool reference, see the [MCP Server Developer Docs](https://github.
 
 ### What is ZKPnote's current status?
 ZKPnote is currently in **Alpha Testing** on the Solana **devnet**. This means the app is fully functional but uses test SOL (not real money) for all blockchain operations. Mainnet launch is planned for a future release.
+
+## Editor & Productivity
+
+### How do I see all keyboard shortcuts?
+Press **⌘/** anywhere in the app. The cheat sheet groups every shortcut by Navigation, Tabs, View, Editor, and Proofs & Sync.
+
+### How do I link between notes?
+Type `[[` in any note. As you type, an autocomplete dropdown shows matching note titles. Press Enter or Tab to insert. In the rendered preview, hover any wikilink for a 280ms popover with the target's first 400 characters; click to jump.
+
+### Can I see what links to a note?
+Yes. The **Backlinks** panel below the editor shows every note that references the current one (via `[[wikilink]]`), plus every outgoing link.
+
+### How do I undo a change from yesterday?
+Click the **clock icon** in the editor toolbar. ZKPnote auto-saves a revision every 10 seconds while you edit, keeping the last 50 per note. View any revision inline, restore with one click. History stays on your device — never synced.
+
+### How do I paste an image?
+Press ⌘V in the editor with an image in your clipboard, or click the **image button** in the toolbar. ZKPnote saves it as an encrypted attachment in your vault and inserts a short reference (`zkp-attach:<id>`) into the markdown — your note body stays clean instead of getting filled with a long base64 string.
+
+### Why does my note say `zkp-attach:` instead of showing the image?
+That's the markdown reference to an encrypted image attachment in your vault. In the preview pane, ZKPnote resolves it and shows the actual image. The short reference keeps your markdown readable.
+
+### Do tables survive switching between Markdown and Rich Text mode?
+Yes. ZKPnote preserves GFM pipe-table syntax round-trip. Edit in either mode and the formatting stays intact when you switch back.
+
+### What is Focus Mode?
+Press **⌘.** to collapse the sidebar, status bar, and tabs — just you and the editor. Press Esc or ⌘. again to restore. Use the **Mode ▾** dropdown in the toolbar if you forget the shortcut.
+
+### How do I export multiple notes at once?
+Click **Select** at the top of the sidebar. Check the notes you want (Cmd-click or Shift-click for ranges). The action bar lets you **Export .md** (downloads a zip of markdown files) or **Delete** in bulk.
+
+### Can I open multiple notes side by side?
+Open several notes — each becomes a tab above the editor. Drag tabs to reorder. Middle-click or **⌘W** closes. **⌘⇧T** reopens the last closed tab. **⌘1**…**⌘9** jumps by index.
+
+### Can I use ZKPnote on my phone?
+Yes. ZKPnote is a responsive web app that works in mobile browsers. The wallet bar and Send/Sell buttons hide automatically to keep the interface clean. Open the sidebar via the hamburger button.
